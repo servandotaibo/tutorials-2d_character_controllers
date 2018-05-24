@@ -26,7 +26,7 @@ public class CharacterController : MonoBehaviour
 	void FixedUpdate ()
     {
         m_grounded = Physics2D.OverlapCircle(m_feet.position, 0.02f, m_groundLayerMask);
-        Debug.Log("grounded = " + m_grounded);
+        
         m_animator.SetBool("Grounded", m_grounded);
         m_animator.SetFloat("vSpeed", m_rb2d.velocity.y);
 
